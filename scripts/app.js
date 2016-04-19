@@ -5,7 +5,8 @@ angular
       function wdiCard(){
           var directive = {
               restrict: 'EA',
-              replace : true
+              replace : true,
+              templateUrl: 'templates/cardDirectory.html'
           };
           return directive;
       }
