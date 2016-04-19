@@ -4,6 +4,9 @@ angular
 
       function wdiCard(){
           var directive = {
+            scope: {
+              question: '@'
+            },
               restrict: 'EA',
               replace : true,
               templateUrl: 'templates/cardDirectory.html'
