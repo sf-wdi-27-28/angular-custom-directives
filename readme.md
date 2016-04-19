@@ -15,7 +15,7 @@
 
 - Describe Angular directives
 
-## Custom Directives - Intro (10 mins)
+## Custom Directives - Intro
 
 As you've seen by now, directives make up a huge amount of the code you work with in Angular. Angular was designed to be an extension of HTML - a way to have custom-defined interactive tags of your own making.
 
@@ -131,7 +131,7 @@ You can choose to have just one, all of the above, or any combination you like. 
 For ours, let's play with just an element.
 
 ```js
-function cardView(){
+function wdiCard(){
   var directive = {
     restrict: 'E'
   };
@@ -163,7 +163,7 @@ Would actually render as:
 See, it's replaced. Let's say we like that for our example:
 
 ```js
-function cardView(){
+function wdiCard(){
   var directive = {
     restrict: 'E',
     replace: true
@@ -190,17 +190,17 @@ Let's extract our existing card tags, and throw them in a partial. Cut out:
 Quickly `touch templates/cardDirective.html` or some similarly obvious-named template, and paste it back in.
 
 ```html
-<!-- app/_cardView.html -->
+<!-- templates/cardDirective.html -->
 <div class='card'>
   <h4 class="card-title">{{card.question}}</h4>
   <h6>Cards Against Assembly</h6>
 </div>
 ```
 
-In `js/cardView.js`, we can add our option:
+In `scripts/cardDirective.js`, we can add our option:
 
 ```js
-function cardView(){
+function wdiCard(){
   var directive = {
     //'A' == attribute, 'E' == element, 'C' == class
     restrict: 'E',
@@ -258,13 +258,13 @@ In our `cardDirective.html` partial, let's adjust to:
 
 No longer reliant on a variable named `card`, it's now just reliant on an element having the attribute of `question`.
 
-And finally, in `js/cardView.js`:
+And finally, in `scripts/cardDirective.js`:
 
 ```js
 angular.module('CardsAgainstAssembly')
-  .directive('card', cardView);
+  .directive('wdiCard', wdiCard);
 
-function cardView(){
+function wdiCard(){
   var directive = {
     //'A' == attribute, 'E' == element, 'C' == class
     restrict: 'E';
@@ -318,3 +318,7 @@ Somewhere _outside_ the context of the controller, let's say just above the foot
 <img width="965" alt="Custom Card" src="https://cloud.githubusercontent.com/assets/25366/9668827/a352dbf8-5238-11e5-8d00-80ccf02ca95c.png">
 
 Would you look at that? Our own custom directive - a reusable, semantic HTML component that we designed ourselves.
+
+### Resources
+
+[This cheat sheet from egghead.io](https://d2eip9sf3oo6c2.cloudfront.net/pdf/egghead-io-directive-definition-object-cheat-sheet.pdf) is a great resource for learning more about the specs allowed in the directive definition object.
