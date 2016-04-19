@@ -3,12 +3,16 @@ angular.module('CardsAgainstAssembly')
 
 function wdiCard(){
   var directive = {
+    restrict: 'EA',
+    replace: true,
+    templateUrl: 'templates/cardDirective.html',
     scope: {
       question: '@' //string = '@' function = '&' object = '='
     }
-    restrict: 'EA',
-    replace: true,
-    templateUrl: 'templates/cardDirective.html'
-  }
+  };
   return directive;
 };
+
+function WdiCardController(){
+  var vm = this;
+}
