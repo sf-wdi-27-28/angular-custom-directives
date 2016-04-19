@@ -1,21 +1,19 @@
-angular
-      .module('CardsAgainstAssembly', [])
-      .directive('wdiCard', wdiCard);
+angular.module('CardsAgainstAssembly')
+  .directive('wdiCard', wdiCard);
 
-      function wdiCard(){
-          var directive = {
-            scope: {
-              question: '@'
-            },
-              restrict: 'EA',
-              replace : true,
-              templateUrl: 'templates/cardDirectory.html',
-              controller: 'WdiCardController',
-              controllerAs: 'wdiCardCtrl'
-          };
-          return directive;
-      }
+function wdiCard(){
+  var directive = {
+    restrict: 'EA',
+    templateUrl: 'templates/cardDirective.html',
+    controller: WdiCardController,
+    controllerAs: 'wdiCardCtrl',
+    scope:{
+      question: '@'
+    }
+  };
+  return directive;
+}
 
-      function WdiCardController () {
-        var vm = this;
-      }
+function WdiCardController(){
+  var vm = this;
+}
