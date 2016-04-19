@@ -9,6 +9,6 @@ function cardsController(){
     {question: "I get by with a little help from _________."},
     {question: "_________. It's a trap!"},
     {question: "The class field trip was completely ruined by _________."},
-    {question: "What's my secret power?"}
-  ]
+    {question: "What's my secret power?"}  
+  ];
 }
