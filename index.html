@@ -10,6 +10,7 @@
         <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.4/angular.min.js"></script>
         <script src="scripts/app.js"></script>
         <script src="scripts/controllers/cardsController.js"></script>
+        <script src="scripts/cardDirective.js"></script>
     </head>
     <body>
       <div class="container">
@@ -20,12 +21,10 @@
         </header>
 
         <section id="cards" class="container-fluid" ng-controller="cardsController as cardsCtrl">
-          <div class="row">
+            <div class="row">
 
-            <div class="col-sm-6 col-md-6 col-lg-4" ng-repeat="card in cardsCtrl.questionsList" >
-              <div class="card">
-                <h4 class="card-title">{{card.question}}</h4>
-                <h6>Cards Against Assembly</h6>
+              <div class="col-sm-6 col-md-6 col-lg-4" ng-repeat="card in cardsCtrl.questionsList" >
+                <wdi-card></wdi-card>
               </div>
             </div>
 
