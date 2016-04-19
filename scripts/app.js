@@ -1,1 +1,3 @@
-angular.module('CardsAgainstAssembly', []);
+angular
+      .module('CardsAgainstAssembly', [])
+      .directive('wdiCard', wdiCard);
