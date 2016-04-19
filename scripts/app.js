@@ -9,7 +9,13 @@ angular
             },
               restrict: 'EA',
               replace : true,
-              templateUrl: 'templates/cardDirectory.html'
+              templateUrl: 'templates/cardDirectory.html',
+              controller: 'WdiCardController',
+              controllerAs: 'wdiCardCtrl'
           };
           return directive;
+      }
+
+      function WdiCardController () {
+        var vm = this;
       }
