@@ -4,9 +4,18 @@ angular.module('CardsAgainstAssembly')
 
 function wdiCard(){
   var directive = {
-    restrict: 'E',
+    restrict: 'EA',
     replace: true,
-    templateUrl: "templates/cardDirective.html"
+    templateUrl: "templates/cardDirective.html",
+    controller: WdiCardController,
+    controllerAs: 'wdiCardCtrl',
+    scope: {
+      question: '@'
+    },
   };
   return directive;
+}
+
+function WdiCardController(){
+  var vm = this;
 }
