@@ -10,6 +10,7 @@
         <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.4/angular.min.js"></script>
         <script src="scripts/app.js"></script>
         <script src="scripts/controllers/cardsController.js"></script>
+        <script src="scripts/Directives/cardDirective.js"></script>
     </head>
     <body>
       <div class="container">
@@ -31,7 +32,12 @@
 
           </div>
         </section>
-
+        <!-- ... -->
+        </section>
+        <hr/>
+        <wdi-card question="{{card.question}}"></wdi-card>
+        <footer>
+        <!-- ... -->
       <footer>
         <p>Made with <span class="heart">♥︎</span> at General Assembly</p>
       </footer>
