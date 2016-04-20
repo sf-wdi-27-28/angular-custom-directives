@@ -1,0 +1,24 @@
+{
+  "name": "angular-custom-directives",
+  "version": "1.0.0",
+  "description": "cards against general assembly",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jha-ayush/angular-custom-directives.git"
+  },
+  "keywords": [
+    "cards",
+    "general",
+    "assembly"
+  ],
+  "author": "ayush",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jha-ayush/angular-custom-directives/issues"
+  },
+  "homepage": "https://github.com/jha-ayush/angular-custom-directives#readme"
+}
