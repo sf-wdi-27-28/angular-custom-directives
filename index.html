@@ -26,11 +26,16 @@
               <div class="card">
                 <h4 class="card-title">{{card.question}}</h4>
                 <h6>Cards Against Assembly</h6>
-              </div>
+              </div><!--end of card -->
             </div>
 
           </div>
         </section>
+
+            <div class="col-sm-6 col-md-6 col-lg-4" ng-repeat="card in cardsCtrl.questionsList" >
+                  <wdi-card question="{{card.question}}"></wdi-card>
+            </div>
+
 
       <footer>
         <p>Made with <span class="heart">♥︎</span> at General Assembly</p>
