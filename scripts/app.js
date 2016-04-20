@@ -1,4 +1,6 @@
 console.log("JS is loaded & running!!");
 
 angular
-      .module('CardsAgainstAssembly', []);
+      .module('CardsAgainstAssembly', [])
+      .controller('CardsController', CardsController)
+      .directive('card', cardDirective);
